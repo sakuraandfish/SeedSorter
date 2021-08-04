@@ -1,0 +1,16 @@
+[
+	{
+		"Id": "Nebroxah.SeedSorterMail", // Letter id. It's important to be an unique string to avoid conflicts. Also it shouldn't have space characters.
+		"GroupId": "RhodesLetters", // Letter group id. Letters with the same group id are never delivered in the same day. Letters registered first have priority, unless the group id ends with ".Random", in that case, a random letter will be chosen. Default is null.
+		"Title": "SeedSorter.title", // Letter title. Will be shown in the collections menu. Set it null or remove the line if you don't want the letter to appear in the collection. If an translation file is provide, you should put a translation key here, but you can still leave if null for no Title.
+		"Text": "SeedSorter.text", // Text of the letter. You can use @ to put the players name and ^ for line breaks. You can also use the base game commands to add money, items and stuff. If an translation file is provide, you should put a translation key here.
+		"Recipe": "Seed Sorter", // Remove the line if you don't want to attach a recipe to the mail. It will only work if you have no other attachments to the mail.
+        "Repeatable": false, // If true the mod won't check it the letter Id has already been delivered. Default is false.
+		// CONDITIONS FOR DELIVERY
+        //Below are conditions for the delivery. Remove any of the lines if you don't want to check that condition.
+		"SkillConditions": // Each skill of the list must have a level equal or higher what is defined. Can use all coded skills in the vanilla game, including Luck. Can't use custom skills.
+		[
+			{ "SkillName": "Farming", "SkillLevel": 4 }
+		]
+    },
+]
